@@ -7,23 +7,77 @@
     <link rel="preconnect" href="https://fonts.googleapis.com">
 <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
 <link href="https://fonts.googleapis.com/css2?family=Bebas+Neue&family=Lato:wght@300;700&family=Montserrat:ital,wght@0,100;0,400;0,500;1,700&family=Open+Sans:wght@800&family=Poppins:wght@300;400;500;600;700&family=Work+Sans:wght@300;400;500;600;700;800&display=swap" rel="stylesheet">
+<style>
+    *{
+        margin: 0;
+        padding: 0;
+        box-sizing: border-box;
+    }
+    body{
+        font-family:'Gill Sans', 'Gill Sans MT', Calibri, 'Trebuchet MS', sans-serif;
+
+    }
+    header{
+        background-color:#2f3240;
+        padding: 20px 0px;
+    }
+
+    .container{
+        max-width: 1170px;
+        margin: auto;
+       
+    }
+
+    .row{
+        display: flex;
+        flex-wrap: wrap;
+        justify-content: space-between;
+        align-items: center;
+        
+    }
+
+    .logo{
+        color: aliceblue;
+        font-size: 30px;
+        text-decoration: none;
+    }
+
+    .nav ul li {
+        display: inline;
+
+    }
+    .nav ul li a{
+        color: white;
+        font-size: 16px;
+        text-decoration: none;
+        margin-left: 25px;
+        
+    }
+
+
+</style>
+
 </head>
+
+
 <body>
     <header>
-        <div class="row">
-            <div class="logo">Logo</div>
+        <div class="container">
+            <div class="row">
+                <div class="logo">Logo</div>
+                <nav class="nav">
+                    <ul>
+                        <li> <a href="#">Home</a></li>
+                        <li> <a href="#">Aboute</a></li>
+                        <li> <a href="#">Servis</a></li>
+                        <li> <a href="#">Testimonials</a></li>
+                        <li> <a href="#">Blogs</a></li>
+                        <li> <a href="#">contac</a></li>
+                        
+                    </ul>
+                </nav>
+             </div>
         </div>
-        <nav>
-            <ul>
-                <li> <a href="#">Home</a></li>
-                <li> <a href="#">Aboute</a></li>
-                <li> <a href="#">Servis</a></li>
-                <li> <a href="#">Testimonials</a></li>
-                <li> <a href="#">Blogs</a></li>
-                <li> <a href="#">contac</a></li>
-                
-            </ul>
-        </nav>
     </header>
     
 </body>
