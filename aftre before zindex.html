@@ -1,0 +1,77 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>after before </title>
+    <style>
+        .container{
+            text-align: center;
+            margin-top:300px;
+            
+        }
+        .button{
+            background-color:aliceblue;
+            padding:5px 10px;
+            color: rgb(8, 8, 8);
+            font-size: 25px;
+            font-weight: 700px;
+            border-radius: 5px;
+            position: relative;
+            z-index: 1;
+            overflow: hidden;
+        }
+        .button:hover{
+            color: beige;
+
+        }
+
+        .button::before, .button::after, .button{
+            transition: .35s;
+        }
+
+
+        
+        .button::before{
+            content: '';
+            width: 50%;
+            height: 100%;
+            background-color: blue;
+            position: absolute;
+            top: -100%;
+            left: 0;
+            z-index: -1;
+            opacity: 0;
+        }
+
+        .button::after{
+            content: '';
+            width: 50%;
+            height: 100%;
+            background-color: red;
+            position: absolute;
+            right: 0;
+            bottom: -100%;
+            z-index: -1;
+            opacity: 0;
+            
+
+        }
+        .button:hover:after{
+            bottom: 0;
+            opacity: 1;
+            
+        }
+        .button:hover:before{
+            opacity: 1;
+            top: 0;
+        }
+    </style>
+</head>
+<body>
+    <div class="container">
+        <button class="button">Click me</button>
+    </div>
+    
+</body>
+</html>

@@ -53,8 +53,75 @@
         margin-left: 25px;
         
     }
+    .nav-Toglee{
+        height: 32px;
+        width: 44px;
+        background-color: rgb(232, 233, 235);
+        /* border: 1px solid rgb(194, 179, 179); */
+        display: none;
+        
+        
+        
 
+        
 
+    }
+    .nav-Toglee:focus{
+        /* box-shadow: 0px 0px 0px 5px rgba(142, 142, 151, 0.3); */
+       box-shadow: 0px 0px 0px 10px rgba(142, 142, 151, 0.3);
+    }
+    .nav-Toglee span{
+        margin-top: 15px;
+        margin-left: 10px;
+        width: 25px;
+        height: 2px;
+        display: block;
+        background-color: rgb(5, 5, 5);
+        /* margin: auto; */
+        position: relative;
+
+    }
+    .nav-Toglee span::before,
+    .nav-Toglee span::after{
+        content: '';
+        position: absolute;
+        background-color: black;
+        height: 100%;
+        width: 100%;
+        top: 0;
+        left: 0;
+    }
+    .nav-Toglee span::after{
+        transform: translateY(-6px);
+    }
+    .nav-Toglee span::before{
+        transform: translateY(6px);
+    }
+
+   @media (max-width:992px) {
+    .nav-Toglee{
+        display: block;
+    }
+
+    .nav ul li {
+        display: block;
+
+    }
+    .nav{
+     display: block;
+
+    }
+    .nav .active{
+        display: block;
+        height: 200px;
+        width: 100%;
+        background-color: red;
+        
+    }
+
+    
+
+}
 </style>
 
 </head>
@@ -65,6 +132,11 @@
         <div class="container">
             <div class="row">
                 <div class="logo">Logo</div>
+                
+                    <div class="nav-Toglee">
+                        <span></span>
+                    </div>
+                
                 <nav class="nav">
                     <ul>
                         <li> <a href="#">Home</a></li>
@@ -80,5 +152,15 @@
         </div>
     </header>
     
+    <script>
+        const navToglee = document.querySelector('.nav-Toglee');
+
+        navToglee.addEventListener('click', funk)
+        function funk(){
+            const nav = document.querySelector('.nav');
+            nav.classList.toggle('active');
+        }
+
+    </script>
 </body>
 </html>
